@@ -23,6 +23,7 @@
 
     function render()
     {
+      alert('first render');
       if(!wave.getState())
       {
         return;
