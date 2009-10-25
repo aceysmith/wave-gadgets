@@ -11,6 +11,16 @@
     document.getElementById('pol_title').innerHTML = title;
   }
   
+  function render()
+  {
+    var state = wave.getState();
+    
+    if(state[title])
+    {
+      document.getElementById('pol_title').innerHTML = state[title];
+    }
+  }
+  
   function init()
   {
     if(wave && wave.isInWaveContainer())
