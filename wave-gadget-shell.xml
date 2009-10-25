@@ -15,7 +15,7 @@
       alert('putting new title');
       var state = wave.getState();
       var delta = {};
-      delta[title] = title;
+      delta['title'] = title;
       state.submitDelta(delta);
       document.getElementById('poll_title').innerHTML = title;
       alert(delta[title]);
@@ -29,7 +29,7 @@
       }
       alert('first render with state');
       var state = wave.getState();
-      var title = state.get(title, '0');
+      var title = state.get('title', '0');
       alert(title);
       if(title != '0')
       {
