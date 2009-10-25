@@ -35,7 +35,7 @@
 
       var delta = {};
       delta['entries'] = { entryName : 'newEntry' };
-      alert(delta);
+      alert(delta['entries']);
       state.submitDelta(delta);
     }
 
