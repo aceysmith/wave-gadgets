@@ -11,7 +11,7 @@
   <script type="text/javascript">
     function assignTitle() 
     {
-      var title = ParseString(document.getElementById('new_title').value);
+      var title = document.getElementById('new_title').value;
       alert('putting new title');
       var state = wave.getState();
       var delta = {};
