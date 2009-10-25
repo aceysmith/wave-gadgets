@@ -20,7 +20,12 @@
     }
     function addEntry()
     {
-      alert('add entry');
+      var state = wave.getState();
+      var delta = {};
+      var newEntry = document.getElementById('new_entry').value;
+      var entryName = 'entry' + state.get(entries,false).length;
+      alert(entryName);
+      delta['entries'] = { entryName : 'newEntry'};
     }
 
     function render()
@@ -31,9 +36,14 @@
       }
       var state = wave.getState();
       var title = state.get('title', false);
+      var entries = state.get('entries', false);
       if(title)
       {
-        document.getElementById('strowl_poll').innerHTML = title + "<br /><input id='new_entry' size='30'><button onclick='addEntry()'>Add entry</button><br />";
+        document.getElementById('strowl_poll').innerHTML = title + "<br /><input id='new_entry' size='30'><button onclick='addEntry()'>Add entry</button><br /><div id='entries'></div>";
+        for(var i=0; i< entries.length; i++)
+        {
+          document.getElementById('entries').innerHTML = i;
+        }
       }
     }
 
