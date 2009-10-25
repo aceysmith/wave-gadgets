@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $("#title_button").click(function()
   {
+    alert('here');
     var title = document.getElementById('new_title').value;
     var state = wave.getState();
     var delta = {};
@@ -30,6 +31,7 @@ $(document).ready(function() {
 
   function render()
   {
+    alert('render with jquery');
     if(!wave.getState())
     {
       return;
