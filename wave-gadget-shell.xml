@@ -50,7 +50,7 @@
       {
         document.getElementById('strowl_poll').innerHTML = title + "<br /><input id='new_entry' size='30'><button onclick='addEntry()'>Add entry</button><br /><div id='entries'></div>";
         if(entries)
-          for(var i=0; i< entries.length; i++)
+          for(var i = 0; i < entries.length; i++)
           {
             document.getElementById('entries').innerHTML = i;
           }
@@ -68,6 +68,7 @@
     }
     gadgets.util.registerOnLoadHandler(init);
   </script>
+  
   <div id="strowl_poll">
     <span id="poll_title">What is the poll question?</span>
     <br />
