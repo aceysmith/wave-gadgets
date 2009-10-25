@@ -21,11 +21,20 @@
     function addEntry()
     {
       var state = wave.getState();
-      var delta = {};
+      var entries = state.get('entries', false);
+      var entryCount = 0;
+      if(entries)
+      {
+        entryCount = entries.length;
+        alert('actual entries!');
+      }
       var newEntry = document.getElementById('new_entry').value;
-      var entryName = 'entry' + state.get(entries,false).length;
+      var entryName = 'entry' + entryCount;
       alert(entryName);
-      delta['entries'] = { entryName : 'newEntry'};
+
+      var delta = {};
+      delta['entries'] = { entryName : 'newEntry' };
+      state.submitDelta(delta);
     }
 
     function render()
@@ -40,9 +49,11 @@
       if(title)
       {
         document.getElementById('strowl_poll').innerHTML = title + "<br /><input id='new_entry' size='30'><button onclick='addEntry()'>Add entry</button><br /><div id='entries'></div>";
-        for(var i=0; i< entries.length; i++)
-        {
-          document.getElementById('entries').innerHTML = i;
+        if(entries)
+          for(var i=0; i< entries.length; i++)
+          {
+            document.getElementById('entries').innerHTML = i;
+          }
         }
       }
     }
