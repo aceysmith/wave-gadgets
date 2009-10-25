@@ -16,6 +16,10 @@
       delta['title'] = title;
       state.submitDelta(delta);
     }
+    function addEntry()
+    {
+
+    }
 
     function render()
     {
@@ -27,7 +31,8 @@
       var title = state.get('title', false);
       if(title)
       {
-        document.getElementById('title_question').innerHTML = title;
+        document.getElementById('strowl_poll').innerHTML = title;
+        document.getElementById('strowl_poll').appendChild = "<input id='new_entry' size='30'><button onclick='addEntry()'>Add entry</button></br>";
       }
     }
 
@@ -39,14 +44,13 @@
         wave.setParticipantCallback(render);
       }
     }
-
     gadgets.util.registerOnLoadHandler(init);
   </script>
-  <div id="title_question">
+  <div id="strowl_poll">
     <span id="poll_title">What is the poll question?</span>
     <br />
     <input id="new_title" size="30">
-    <button id="butCount" onclick="assignTitle()">Start the poll</button><br/>
+    <button onclick="assignTitle()">Start the poll</button><br/>
   </div>
 
 ]]>
