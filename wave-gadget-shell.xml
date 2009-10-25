@@ -30,10 +30,12 @@
       }
       var newEntry = document.getElementById('new_entry').value;
       var entryName = 'entry' + entryCount;
+      alert(entries);
       alert(entryName);
 
       var delta = {};
       delta['entries'] = { entryName : 'newEntry' };
+      alert(delta);
       state.submitDelta(delta);
     }
 
