@@ -27,7 +27,7 @@
       var title = state.get('title', false);
       if(title)
       {
-        document.getElementById('poll_title').innerHTML = title;
+        document.getElementById('title_question').innerHTML = title;
       }
     }
 
@@ -42,11 +42,12 @@
 
     gadgets.util.registerOnLoadHandler(init);
   </script>
-  <span id="poll_title">What is the poll called?</span>
-  <br />
-  <input id="new_title" size="10">
-  <button id="butCount" onclick="assignTitle()">Start the poll</button><br/>
-
+  <div id="title_question">
+    <span id="poll_title">What is the poll question?</span>
+    <br />
+    <input id="new_title" size="30">
+    <button id="butCount" onclick="assignTitle()">Start the poll</button><br/>
+  </div>
 
 ]]>
 </Content>
