@@ -11,13 +11,10 @@
     function assignTitle() 
     {
       var title = document.getElementById('new_title').value;
-      alert('putting new title');
       var state = wave.getState();
       var delta = {};
       delta['title'] = title;
       state.submitDelta(delta);
-      document.getElementById('poll_title').innerHTML = title;
-      alert(delta['title']);
     }
 
     function render()
@@ -26,10 +23,8 @@
       {
         return;
       }
-      alert('first render with state');
       var state = wave.getState();
       var title = state.get('title', '0');
-      alert(title);
       if(title != '0')
       {
         document.getElementById('poll_title').innerHTML = title;
