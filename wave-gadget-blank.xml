@@ -14,9 +14,10 @@
   function render()
   {
     var state = wave.getState();
-    if(state[title])
+    var title = wave.get(title, '0');
+    if(title)
     {
-      document.getElementById('pol_title').innerHTML = state[title];
+      document.getElementById('pol_title').innerHTML = title;
     }
   }
   
