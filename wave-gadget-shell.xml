@@ -33,7 +33,7 @@
       var title = state.get('title', false);
       if(title)
       {
-        document.getElementById('strowl_poll').innerHTML = title + "<input id='new_entry' size='30'><button onclick='addEntry()'>Add entry</button></br>";
+        document.getElementById('strowl_poll').innerHTML = title + "<br /><input id='new_entry' size='30'><button onclick='addEntry()'>Add entry</button><br />";
       }
     }
 
