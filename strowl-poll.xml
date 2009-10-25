@@ -1,0 +1,37 @@
+<script type="text/javascript" src="http://wave-api.appspot.com/public/wave.js"></script> 
+
+<script type="text/javascript">
+  function assignTitle()
+  {
+    document.getElementById('title').innerHTML ="boo";
+  }
+  
+  function addEntry()
+  {
+    
+  }
+  
+  function vote()
+  {
+    
+  }
+  
+  function render()
+  {
+    
+  }
+  
+  function init()
+  {
+    if (wave && wave.isInWaveContainer()) 
+    { 
+      wave.setStateCallback(render); 
+      wave.setParticipantCallback(render); 
+    } 
+  }
+</script>
+
+<span id="title">What is the poll question?</span>
+<br />
+<input id="pollQuestion" size="20">
+<button id="submit" onclick"assignTitle()">Start the poll</button>
