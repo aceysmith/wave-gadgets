@@ -5,7 +5,7 @@
 
   <Content type="html">
   <![CDATA[
-`
+
   <script type="text/javascript"
       src="http://wave-api.appspot.com/public/wave.js"></script>
   <script type="text/javascript">
