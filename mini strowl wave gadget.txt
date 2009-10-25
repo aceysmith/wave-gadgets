@@ -1,10 +1,10 @@
 STROWL POLL
 
-Add gadget
+X Add gadget
 
-Dialog box with list name field
+X Dialog box with list name field
 
-Hit OK and it changes to
+X Hit OK and it changes to
 
 "
 List X
