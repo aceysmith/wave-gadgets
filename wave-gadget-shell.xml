@@ -12,11 +12,13 @@
     function assignTitle() 
     {
       var title = ParseString(document.getElementById('new_title').value);
+      alert('putting new title');
       var state = wave.getState();
       var delta = {};
       delta[title] = title;
       state.submitDelta(delta);
       document.getElementById('poll_title').innerHTML = title;
+      alert(delta[title]);
     }
 
     function render()
