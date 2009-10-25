@@ -1,0 +1,33 @@
+STROWL POLL
+
+X Add gadget
+
+X Dialog box with list name field
+
+X Hit OK and it changes to
+
+"
+List X
+(Add item field) (Add button)
+"
+
+Adding an item changes it to
+
+
+"
+List X
+(Add item field) (Add button)
+Item 1  # votes (percentage bar or number)	(Vote!)
+"
+
+Voting increases the number of votes then makes the vote buttons disappear for that user. changes it to
+
+"List X
+(Add item field) (Add button)
+Item 1 #+1 votes (percentage bar or number)
+(Clear your vote button)
+"
+fin.
+
+Table
+userId => EntryName

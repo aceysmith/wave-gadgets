@@ -26,7 +26,7 @@
       if(entries)
       {
         entryCount = entries.length;
-        alert('actual entries!');
+        alert(entryCount);
       }
       var newEntry = document.getElementById('new_entry').value;
       var entryName = 'entry' + entryCount;
@@ -34,7 +34,7 @@
       alert(entryName);
 
       var delta = {};
-      delta['entries'] = { entryName : 'newEntry' };
+      delta['entries'] = { entryName : newEntry };
       alert(delta['entries']);
       state.submitDelta(delta);
     }
