@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("title_button").click(function()
+  $("#title_button").click(function()
   {
     var title = document.getElementById('new_title').value;
     var state = wave.getState();
