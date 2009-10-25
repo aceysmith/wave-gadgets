@@ -16,16 +16,20 @@
       var delta = {};
       delta[title] = title;
       state.submitDelta(delta);
-      document.getElementById('pol_title').innerHTML = title;
+      document.getElementById('poll_title').innerHTML = title;
     }
 
     function render()
     {
+      if(!wave.getState())
+      {
+        return;
+      }
       var state = wave.getState();
       var title = state.get(title, '0');
       if(title)
       {
-        document.getElementById('pol_title').innerHTML = title;
+        document.getElementById('poll_title').innerHTML = title;
       }
     }
 
