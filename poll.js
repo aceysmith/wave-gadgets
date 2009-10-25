@@ -1,5 +1,4 @@
-alert('load jquery');
-$("#title_button").click(function()
+$("#title_button").live('click', function()
 {
   alert('here');
   var title = document.getElementById('new_title').value;
@@ -7,7 +6,7 @@ $("#title_button").click(function()
   var delta = {};
   delta['title'] = title;
   state.submitDelta(delta);
-};
+});
 function addEntry()
 {
   var state = wave.getState();
@@ -31,7 +30,6 @@ function addEntry()
 
 function render()
 {
-  alert('render with jquery');
   if(!wave.getState())
   {
     return;
