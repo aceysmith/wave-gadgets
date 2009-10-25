@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  alert('load jquery');
   $("#title_button").click(function()
   {
     alert('here');
@@ -7,7 +8,7 @@ $(document).ready(function() {
     var delta = {};
     delta['title'] = title;
     state.submitDelta(delta);
-  }
+  };
   function addEntry()
   {
     var state = wave.getState();
@@ -27,7 +28,7 @@ $(document).ready(function() {
     delta['entries'] = { entryName : newEntry };
     alert(delta['entries']);
     state.submitDelta(delta);
-  }
+  };
 
   function render()
   {
@@ -50,7 +51,7 @@ $(document).ready(function() {
         }
       }
     }
-  }
+  };
 
   function init()
   {
@@ -59,6 +60,6 @@ $(document).ready(function() {
       wave.setStateCallback(render);
       wave.setParticipantCallback(render);
     }
-  }
+  };
   gadgets.util.registerOnLoadHandler(init);
 });
