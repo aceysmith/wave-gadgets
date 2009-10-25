@@ -5,13 +5,13 @@
 
   <Content type="html">
   <![CDATA[
-
+`
   <script type="text/javascript"
       src="http://wave-api.appspot.com/public/wave.js"></script>
   <script type="text/javascript">
     function buttonClicked() 
     {
-      alert('will it take alerts?');
+      alert('will it take alerts?!');
     }
   </script>
   <span id="poll_title">What is the poll called?</span>
