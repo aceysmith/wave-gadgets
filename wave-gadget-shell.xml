@@ -23,7 +23,6 @@
 
     function render()
     {
-      alert('first render');
       if(!wave.getState())
       {
         return;
@@ -31,6 +30,7 @@
       alert('first render with state');
       var state = wave.getState();
       var title = state.get(title, '0');
+      alert(title);
       if(title != '0')
       {
         document.getElementById('poll_title').innerHTML = title;
