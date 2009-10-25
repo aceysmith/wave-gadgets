@@ -11,7 +11,7 @@
   <script type="text/javascript">
     function buttonClicked() 
     {
-      document.getElementById('pol_title').innerHTML = document.getElementById('new_title').value;
+      document.getElementById('poll_title').innerHTML = document.getElementById('new_title').value;
     }
   </script>
   <span id="poll_title">What is the poll called?</span>
