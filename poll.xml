@@ -15,7 +15,7 @@
     <span id="poll_title">What is the poll question?</span>
     <br />
     <input id="new_title" size="30">
-    <button onclick="assignTitle()">Start the poll</button><br/>
+    <button id="title_button">Start the poll</button><br/>
   </div>
 
 ]]>
