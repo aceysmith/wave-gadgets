@@ -12,15 +12,6 @@
     {
       alert('will it take alerts?');
     }
-
-    function renderInfo() 
-    {
-
-    }
-
-    function main() 
-    {
-    }
   </script>
   <span id="poll_title">What is the poll called?</span>
   <input id="new_title" size="10">
