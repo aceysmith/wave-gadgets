@@ -24,7 +24,7 @@
         return;
       }
       var state = wave.getState();
-      var title = state.get('title', '0');
+      var title = state.get('title', false);
       if(title)
       {
         document.getElementById('poll_title').innerHTML = title;
