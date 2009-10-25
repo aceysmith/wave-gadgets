@@ -14,7 +14,6 @@
   function render()
   {
     var state = wave.getState();
-    alert('state')
     if(state[title])
     {
       document.getElementById('pol_title').innerHTML = state[title];
