@@ -6,8 +6,7 @@
   <Content type="html">
   <![CDATA[
 
-  <script type="text/javascript"
-      src="http://wave-api.appspot.com/public/wave.js"></script>
+  <script type="text/javascript" src="http://wave-api.appspot.com/public/wave.js"></script>
   <script type="text/javascript">
     function assignTitle() 
     {
@@ -18,7 +17,7 @@
       delta['title'] = title;
       state.submitDelta(delta);
       document.getElementById('poll_title').innerHTML = title;
-      alert(delta[title]);
+      alert(delta['title']);
     }
 
     function render()
@@ -49,6 +48,7 @@
     gadgets.util.registerOnLoadHandler(init);
   </script>
   <span id="poll_title">What is the poll called?</span>
+  <br />
   <input id="new_title" size="10">
   <button id="butCount" onclick="assignTitle()">Start the poll</button><br/>
 
