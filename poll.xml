@@ -17,16 +17,17 @@
     <input id="new_title" size="30">
     <button id="title_button">Start the poll</button><br/>
   </div>
-  
-  function init()
-  {
-    if(wave && wave.isInWaveContainer())
+  <script type="text/javascriot">
+    function init()
     {
-      wave.setStateCallback(render);
-      wave.setParticipantCallback(render);
-    }
-  };
-  gadgets.util.registerOnLoadHandler(init);
+      if(wave && wave.isInWaveContainer())
+      {
+        wave.setStateCallback(render);
+        wave.setParticipantCallback(render);
+      }
+    };
+    gadgets.util.registerOnLoadHandler(init);
+  </script>
 ]]>
 </Content>
 </Module>
