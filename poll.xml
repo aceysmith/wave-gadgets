@@ -8,17 +8,12 @@
 
   <script type="text/javascript" src="http://wave-api.appspot.com/public/wave.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
-  
-  <div id="strowl_poll">
-    <span id="poll_title">What is the poll question?</span>
-    <br />
-    <input id="new_title" size="30">
-    <button id="title_button">Start the poll</button><br/>
-  </div>
+
+
   <script type="text/javascript">
+    
     $("#title_button").live('click', function()
     {
-      alert('here');
       var title = document.getElementById('new_title').value;
       var state = wave.getState();
       var delta = {};
@@ -26,7 +21,7 @@
       state.submitDelta(delta);
     });
 
-    function addEntry()
+    $("#new_entry_button").live('click', function()
     {
       var state = wave.getState();
       var entries = state.get('entries', false);
@@ -45,7 +40,7 @@
       delta['entries'] = { entryName : newEntry };
       alert(delta['entries']);
       state.submitDelta(delta);
-    }
+    });
 
     function render()
     {
@@ -58,7 +53,7 @@
       var entries = state.get('entries', false);
       if(title)
       {
-        document.getElementById('strowl_poll').innerHTML = title + "<br /><input id='new_entry' size='30'><button onclick='addEntry()'>Add entry</button><br /><div id='entries'></div>";
+        document.getElementById('strowl_poll').innerHTML = title + "<br /><input id='new_entry' size='30'><button id="new_entry_button">Add entry</button><br /><div id='entries'></div>";
         if(entries)
         {
           for(var i = 0; i < entries.length; i++)
@@ -68,6 +63,7 @@
         }
       }
     }
+    
     function init()
     {
       if(wave && wave.isInWaveContainer())
@@ -77,7 +73,15 @@
       }
     };
     gadgets.util.registerOnLoadHandler(init);
-  </script>
+  </script>  
+  
+  
+  <div id="strowl_poll">
+    <span id="poll_title">What is the poll question?</span>
+    <br />
+    <input id="new_title" size="30">
+    <button id="title_button">Start the poll</button><br/>
+  </div>
 ]]>
 </Content>
 </Module>
