@@ -7,6 +7,7 @@ $("#title_button").live('click', function()
   delta['title'] = title;
   state.submitDelta(delta);
 });
+
 function addEntry()
 {
   var state = wave.getState();
@@ -49,13 +50,3 @@ function render()
     }
   }
 };
-
-function init()
-{
-  if(wave && wave.isInWaveContainer())
-  {
-    wave.setStateCallback(render);
-    wave.setParticipantCallback(render);
-  }
-};
-gadgets.util.registerOnLoadHandler(init);
