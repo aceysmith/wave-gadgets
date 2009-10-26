@@ -11,7 +11,6 @@
 
 
   <script type="text/javascript">
-    
     $("#title_button").live('click', function()
     {
       var title = document.getElementById('new_title').value;
@@ -53,7 +52,7 @@
       var entries = state.get('entries', false);
       if(title)
       {
-        document.getElementById('strowl_poll').innerHTML = title + "<br /><input id='new_entry' size='30'><button id="new_entry_button">Add entry</button><br /><div id='entries'></div>";
+        document.getElementById('strowl_poll').innerHTML = title + "<br /><input id='new_entry' size='30'><button id='new_entry_button'>Add entry</button><br /><div id='entries'></div>";
         if(entries)
         {
           for(var i = 0; i < entries.length; i++)
