@@ -18,12 +18,16 @@
     <button id="title_button">Start the poll</button><br/>
   </div>
   <script type="text/javascript">
+    function callbackRender()
+    {
+      render();
+    }
     function init()
     {
       if(wave && wave.isInWaveContainer())
       {
         wave.setStateCallback(render);
-        wave.setParticipantCallback(render);
+        wave.setParticipantCallback(callbackRender);
       }
     };
     gadgets.util.registerOnLoadHandler(init);
