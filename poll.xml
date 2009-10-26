@@ -26,7 +26,7 @@
     {
       if(wave && wave.isInWaveContainer())
       {
-        wave.setStateCallback(render);
+        wave.setStateCallback(callbackRender);
         wave.setParticipantCallback(callbackRender);
       }
     };
