@@ -18,16 +18,20 @@
       delta['title'] = title;
       state.submitDelta(delta);
     });
-
+    $(".vote").live('click', function()
+    {
+      var state = wave.getState();
+      var count = state.get($(this).val());
+      delta = {};
+      delta[$(this).val()] = count + 1;
+      state.submitDelta(delta);
+    });
     $("#new_answer_button").live('click', function()
     {
       var state = wave.getState();
-      var answerCount = parseInt(state.get('answerCount', '0')) + 1;
       var newAnswer = $('#new_answer').val();
-      var answerName = 'answer' + answerCount;
       var delta = {};
-      delta['answerCount'] = answerCount;
-      delta[answerName] = newAnswer;
+      delta[newAnswer] = 1;
       state.submitDelta(delta);
     });
 
@@ -44,11 +48,11 @@
         $('#strowl_poll').html(title + "<br /><input id='new_answer' size='30'><button id='new_answer_button'>Add answer</button><br /><div id='answers'></div>");
         var keys = state.getKeys();
         $('#answers').html('');
-        for(i=2; i < keys.length; i++)
+        for(i=1; i < keys.length; i++)
         {
           key = keys[i];
           value = state.get(key);
-          $('#answers').append(value + "<br />");
+          $('#answers').append(key + ' - ' + state.get(key) + ' votes' + "<button class='vote' value='" + key + "'>+</button><br />");
         }
       }
     }
