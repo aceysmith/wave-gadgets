@@ -21,7 +21,7 @@
     $(".vote").live('click', function()
     {
       var state = wave.getState();
-      var count = state.get($(this).val());
+      var count = parseInt(state.get($(this).val()));
       delta = {};
       delta[$(this).val()] = parseInt(count) + 1;
       state.submitDelta(delta);
@@ -31,7 +31,7 @@
       var state = wave.getState();
       var newAnswer = $('#new_answer').val();
       var delta = {};
-      delta[newAnswer] = 0;
+      delta[newAnswer] = '0';
       state.submitDelta(delta);
     });
 
@@ -52,7 +52,7 @@
         {
           key = keys[i];
           value = state.get(key);
-          $('#answers').append(key + ' - ' + state.get(key) + ' votes' + "<button class='vote' value='" + key + "'>+</button><br />");
+          $('#answers').append(key + ' - ' + parseInt(state.get(key)) + ' votes' + "<button class='vote' value='" + key + "'>+</button><br />");
         }
       }
     }
