@@ -23,7 +23,7 @@
       var state = wave.getState();
       var count = state.get($(this).val());
       delta = {};
-      delta[$(this).val()] = count + 1;
+      delta[$(this).val()] = parseInt(count) + 1;
       state.submitDelta(delta);
     });
     $("#new_answer_button").live('click', function()
