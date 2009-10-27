@@ -25,7 +25,7 @@ Gadgets.prototype = {
 				doc.write("<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js\"></script>");
 				doc.write("<script>document._participant_id="+part.id+";</script>");
 				doc.write("<script src=\"gadgetemulator.js\"></script>");
-				doc.write("<h3>Participant "+part.id+" - " +part.displayName+"</strong>");
+				doc.write("<h3>Participant "+part.id+" - " +part.displayName+"</h3>");
 				doc.write(text);
 				doc.write("<script>gadgets.util._ready("+part.id+")</script>");
 			}

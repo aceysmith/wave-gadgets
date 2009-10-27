@@ -12,20 +12,13 @@ iframe { background: #ffffff; width: 49%; height: 50%; }
 <script type="text/javascript" src="http://wave-api.appspot.com/public/wave.js"></script>
 </head>
 <body>
-
-Quick and dirty <a href="http://wave.google.com/">Google Wave</a> Gadget API emulator. By <a href="http://www.hokstad.com/blog">Vidar Hokstad</a> (<a href="http://www.twitter.com/vhokstad">Follow me on Twitter</a>) -
-See <a href="http://www.hokstad.com/google-wave-gadget-emulator.html">This blog post for more info</a>
-<br>
-<form id="load" method="get" action="#">
-Gadget XML source: <input id="g" type="text" name="g" value="fridge.xml" /> (try 'bidder.xml', 'button-counter.xml' or 'fridge.xml')
-<input type="submit" name="load" value="load" />
-</form>
-<br/>
-
 <div id="frames">
 <iframe></iframe><iframe></iframe>
 </div>
-<br/>
+<form id="load" method="get" action="#">
+Gadget XML source: <input id="g" type="text" name="g" value="poll.xml" /> (try 'bidder.xml', 'button-counter.xml' or 'fridge.xml')
+<input type="submit" name="load" value="load" />
+</form>
 <h3>Gadget state</h3>
 <form>
 <textarea id="state">
