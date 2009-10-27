@@ -1,5 +1,5 @@
 <Module>
-  <ModulePrefs title="Title">
+  <ModulePrefs title="Title" height="300">
     <Require feature="rpc"/>
   </ModulePrefs>
 
@@ -45,14 +45,14 @@
       var title = state.get('title', false);
       if(title)
       {
-        $('#strowl_poll').html(title + "<br /><input id='new_answer' size='30'><button id='new_answer_button'>Add answer</button><br /><div id='answers'></div>");
+        $('#strowl_poll').html(title + "<br /><input id='new_answer' size='30'><button id='new_answer_button'>What's your answer?</button><br /><div id='answers'></div>");
         var keys = state.getKeys();
         $('#answers').html('');
         for(i=1; i < keys.length; i++)
         {
           key = keys[i];
           value = state.get(key);
-          $('#answers').append(key + ' - ' + parseInt(state.get(key)) + ' votes' + "<button class='vote' value='" + key + "'>+</button><br />");
+          $('#answers').append("<button class='vote' value='" + key + "'>+</button> " + key + ' - ' + parseInt(state.get(key)) + ' votes' + "<br />");
         }
       }
     }
@@ -70,7 +70,7 @@
   
   
   <div id="strowl_poll">
-    <span id="poll_title">What is the poll question?</span>
+    <span id="poll_title">What's your question?</span>
     <br />
     <input id="new_title" size="30">
     <button id="title_button">Start the poll</button><br/>
