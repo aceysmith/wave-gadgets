@@ -31,7 +31,7 @@
       var state = wave.getState();
       var newAnswer = $('#new_answer').val();
       var delta = {};
-      delta[newAnswer] = 1;
+      delta[newAnswer] = 0;
       state.submitDelta(delta);
     });
 
