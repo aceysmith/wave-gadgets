@@ -69,7 +69,7 @@
   </script>  
   
   
-  <div id="strowl_poll" style="height:500px; display:block;">
+  <div id="strowl_poll" style="height:500px; display:fixed;">
     <span id="poll_title">What's your question?</span>
     <br />
     <input id="new_title" size="30">
