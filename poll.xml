@@ -45,7 +45,7 @@
       var title = state.get('title', false);
       if(title)
       {
-        $('#strowl_poll').html(title + "<br /><input id='new_answer' size='30'><button id='new_answer_button'>What's your answer?</button><br /><div id='answers'></div>");
+        $('#strowl_poll').html(title + "<br /><input id='new_answer' size='30'><button id='new_answer_button'>Add another choice</button><br /><div id='answers'></div>");
         var keys = state.getKeys();
         $('#answers').html('');
         for(i=1; i < keys.length; i++)
