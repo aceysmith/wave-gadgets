@@ -1,5 +1,5 @@
 <Module>
-  <ModulePrefs title="Title" height="100">
+  <ModulePrefs title="Title">
     <Require feature="rpc"/>
   </ModulePrefs>
 
