@@ -44,11 +44,11 @@
         $('#strowl_poll').html(title + "<br /><input id='new_answer' size='30'><button id='new_answer_button'>Add answer</button><br /><div id='answers'></div>");
         var keys = state.getKeys();
         $('#answers').html('');
-        for(i=0; i < keys.length; i++)
+        for(i=2; i < keys.length; i++)
         {
           key = keys[i];
-          alert(key);
-          $('#answers').append('i');
+          value = state.get(key);
+          $('#answers').append(value + "<br />");
         }
       }
     }
